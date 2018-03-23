@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Show Jenkins Pipeline Failures",
+  "short_name": "Jenkins Pipeline Failures",
+  "description": "This extension pulls pipeline failures to the top of the page!",
+  "version": "0.1.0",
+
+  "content_scripts":[
+	  {
+		  "js": ["main.js"],
+      "run_at": "document_idle",
+		  "matches": ["*://*/job/*/*/flowGraphTable*"]
+	  }
+  ]
+}
